@@ -1,0 +1,80 @@
+[
+    {
+        "id": "1",
+        "img": "https://i.ibb.co/dGvKRFK/ferrari-laferrari.webp",
+        "price": "$1.4 Million",
+        "name": "Ferrari LaFerrari",
+        "description": "At $1.4 million new, the Ferrari LaFerrari is actually one of the most affordable supercars on this list. It’s a bargain compared to the most expensive vehicle here. Debuting in 2013 with 950 hybrid horses (708 kilowatts) and a top speed of around 220 miles per hour (354 kilometers per hour), this is still Ferrari’s fastest and most powerful production model to date. The company built just 499 examples of the coupe between 2013 and 2016."
+        
+    },
+    {
+        "id": "2",
+        "img": "https://i.ibb.co/qpQ0vf9/pagani-huayra.jpg",
+        "name": "Pagani Huayra",
+        "description": "Inarguably one of the prettiest cars on this list, the Pagani Huayra cost a cool $1.4 million when new. Like the LaFerrari, Pagani built the Huayra in extremely limited numbers. The company hand-constructed just 100 units of the coupe between 2012 and 2018, with another 20 versions of the BC model (which makes our list further down) between 2017 and 2019. Powering each and every example was a Mercedes-AMG V12 capable of 720 horsepower (537 kilowatts).",
+        "price": "$1.4 Million"
+    },
+    {
+        "id": "3",
+        "img": "https://i.ibb.co/TbyxsNs/mclaren-elva.webp",
+        "name": "McLaren Elva",
+        "description": "The McLaren Elva is one of the latest additions to the British supercar maker’s storied legacy. Even without a proper windshield (though, no option) or roof to rely on, the Elva produces 804 horsepower and 590 pound-feet of torque from its twin-turbocharged 4.0-liter V8. Originally McLaren announced just 399 units, but later the company dropped that to an even more scarce 249 examples. Either way, most of you will never get your hands on one – the Elva costs $1.7 million.",
+        "price": "$1.7 Million"
+    },
+    {
+        "id": "4",
+        "img": "https://i.ibb.co/SR0nL0Q/ferrari-monza-sp1.webp",
+        "name": "Ferrari Monza",
+       
+        "description": "Much like the roof-less McLaren Elva, the Ferrari Monza SP1 and SP2 are all about al fresco motoring. As the name implies, the SP1 is the single-seater option while the SP2 has just enough room for you to bring along a friend. Both cars come powered by the same naturally aspirated 6.5-liter V12 engine capable of 809 horsepower and 530 pound-feet. Unfortunately for US buyers, neither of these models are street legal in the States.",
+        "price": "$1.7 Million"
+    },
+    {
+        "id": "5",
+        "img": "https://i.ibb.co/syzgZBd/bentley-bacalar.webp",
+        "name": "Bentley Bacalar",
+        
+        "description": "With just 12 total units produced, the Bentley Bacalar makes some of cars on this list look plentiful by comparison. Although the car’s opulent design may be the first thing to grab your attention, the Bacalar is no slouch in terms of performance either. With Bentley’s signature turbocharged 6.0-liter W12 turbocharged engine, this car delivers 650 horsepower and 664 pound-feet",
+        "price": "$1.9 Million"
+    },
+    {
+        "id": "6",
+        "img": "https://i.ibb.co/g9N20FP/pininfarina-battista.webp",
+        "name": "Pininfarina Battista",
+        "description": "Aptly named after the company’s founder, Battista Farina, the Pininfarina Battista delivers the kind of performance (and price!) to make its namesake proud. Revealed at the 2019 Geneva Motor Show, the Battista is completely electric, putting out 1,827 horsepower. If a normal supercar’s 0 to 60 time sounds too leisurely for you, the company says that the Battista will take you there in under 2.0 seconds",
+        "price": "$2.5 Million"
+    },
+    {
+        "id": "7",
+        "img": "https://i.ibb.co/sgG17CG/mercedes-amg-project-one.webp",
+        "name": "Mercedes-AMG Project One",
+
+        "description": "Mercedes has promised a production version of the Project One hypercar for quite a while now. The first official announcement was in March of 2017 before the first concept debuted later that same year. But after nearly five years of teasing, it appears as if the Project One will finally hit public roads.",
+        "price": "$2.7 Million"
+    },
+    {
+        "id": "8",
+        "img": "https://i.ibb.co/1Q9hrRm/aston-martin-victor-static.webp",
+        "name": "Aston Martin Victor",
+        "model": "",
+        "description": "The folks at Aston Martin know a thing or two about exclusive vehicles, and the Victor might be the most exclusive project for the British brand to date. Based on the One-77 platform, the Victor uses parts from several donor Astons including the track project Vulcan and the upcoming Valkyrie.",
+        "price": "$3.0 Million"
+    },
+    {
+        "id": "9",
+        "img": "https://i.ibb.co/Tg2D5xX/rolls-royce-boat-tail.webp",
+        "name": "Rolls-Royce Boat Tail*",
+        "model": "",
+        "description": "Rolls-Royce is back in the business of coachbuilding with the gorgeous new Boat Tail. A successor to the stunning Sweptail from 2017 – which itself cost a reported $12.8 million – the Boat Tail has a unique two-tone exterior, custom high-end finishes inside, and even a  complete with a champagne fridge and built-in sun umbrella. Although Rolls-Royce doesn’t officially announce",
+        "price": "$28.0 Million (est.)"
+    },
+    {
+        "id": "10",
+        "img": "https://i.ibb.co/yyQjqKc/bugatti-la-voiture-noire.webp",
+        "name": "Bugatti La Voiture Noire",
+        "model": "",
+        "description": "With a price tag of $18.7 million and a selling price of $18.7 million after taxes, the one-off Bugatti La Voiture Noire is officially most expensive new car ever. And understandably. A modern interpretation of Jean Bugatti's personal Type 57 SC Atlantic, the La Voiture Noire uses the same quad-turbo 8.0-liter W16 engine as the Chiron, producing 1,479 horsepower (1,102 kilowatts)",
+        "price": "$18.7 Million"
+    }
+
+]
