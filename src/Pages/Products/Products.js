@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Product from '../Product/Product';
 
 
@@ -17,13 +18,14 @@ const Products = () => {
         
             <div class="row row-cols-1 row-cols-md-3 g-3 mt-5 h-100">
             {
-                products.map(product => <Product
+                products.slice(0,6).map(product => <Product
                 key={product.id}
                 product={product}
                 ></Product>)
             }
-    </div>
-
+             </div>
+            {/* <div class="more-button"><NavLink to="/product"><button class="btn btn-primary">More Cars</button></NavLink>
+              </div> */}
         </div>
     );
 };

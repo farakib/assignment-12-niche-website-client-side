@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import BuyingModal from '../BuyingModal/BuyingModal';
 import './Product.css';
+
+
 const Product = ({product}) => {
     const {name, description, price, img} = product;
+    const [openBuying, setBuyingOpen] = React.useState(false);
+    const handleBuyingOpen = () => setBuyingOpen(true);
+    const handleBuyingClose = () => setBuyingOpen(false);
     return (
-        <div>
+      <>
+      <div>
      <div class="col">
     <div class="card h-100">
       <img src={img} class="card-img-top" alt="..."/>
@@ -12,10 +20,18 @@ const Product = ({product}) => {
         <p class="card-text">{description}</p>
         <h6>price: {price}</h6>
       </div>
-      <button class="btn btn-primary">Buy Now</button>
+        <button onClick={handleBuyingOpen} class="btn btn-primary">Buy Now</button>
+
     </div>
   </div>
+      
         </div>
+        <BuyingModal
+        product={product}
+        openBuying={openBuying}
+        handleBuyingClose={handleBuyingClose}
+        ></BuyingModal>
+        </>
     );
 };
 
