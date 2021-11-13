@@ -11,15 +11,15 @@ const Product = ({product}) => {
     const handleBuyingClose = () => setBuyingOpen(false);
     return (
       <>
-      <div>
-     <div class="col">
-    <div class="card h-100">
-      <img src={img} class="card-img-top" alt="..."/>
-      <div class="card-body">
-        <h5 class="card-title">{name}</h5>
-        <p class="card-text">{description}</p>
-        <h6>price: {price}</h6>
-      </div>
+        <div>
+      <div class="col">
+      <div class="card h-100">
+        <img src={img} class="card-img-top" alt="..."/>
+        <div class="card-body">
+          <h5 class="card-title">{name}</h5>
+          <p class="card-text">{description}</p>
+          <h6>price: {price}</h6>
+        </div>
         <button onClick={handleBuyingOpen} class="btn btn-primary">Buy Now</button>
 
     </div>

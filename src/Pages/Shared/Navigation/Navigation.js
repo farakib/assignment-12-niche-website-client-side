@@ -6,7 +6,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { NavLink } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 const Navigation = () => {
+  const {user, logOut} =useAuth();
     return (
         <div>
              <Box sx={{ flexGrow: 1 }}>
@@ -24,7 +27,23 @@ const Navigation = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             CarHub
           </Typography>
-          <Button color="inherit">Login</Button>
+          <NavLink style={{textDecoration: 'none', color:'white'}} to="/explores"><Button color="inherit">Explores</Button></NavLink>
+            {
+              user?.email ? 
+              <Box>
+                <NavLink style={{textDecoration: 'none', color:'white'}} to="/dashboard">
+                <Button color="inherit">Dashboard</Button>
+                </NavLink>
+
+              <Button onClick={logOut} color="inherit">LogOut</Button>
+              </Box>
+            
+              :
+              <NavLink style={{textDecoration: 'none', color:'white'}} to="/login">
+                <Button color="inherit">Login</Button>
+                </NavLink>
+
+            }
         </Toolbar>
       </AppBar>
     </Box>

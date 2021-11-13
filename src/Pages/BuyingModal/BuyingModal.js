@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { CardMedia } from '@mui/material';
 import TextField from '@mui/material/TextField';
+import useAuth from '../../Hooks/useAuth';
 
 const style = {
   position: 'absolute',
@@ -20,16 +21,47 @@ const style = {
   p: 4,
 };
 const BuyingModal = ({openBuying, handleBuyingClose, product}) => {
-   const {name, price, img}= product;
+   const {name, price}= product;
+   const{user} =useAuth();
+   const initialInfo = {userName: '', email: user.email, phone: ''}
+   const [buyingInfo, setBuyingInfo] = useState(initialInfo);
+
+  const handleOnBlur = e =>{
+    const field  = e.target.name;
+    const value = e.target.value;
+    const newInfo = {...buyingInfo};
+    newInfo[field]= value;
+    console.log(newInfo);
+    setBuyingInfo(newInfo);
+  }
 
    const handleBuyingSubmit = e =>{
-    alert('submitted')
 
     // 
+     const car ={
+       ...buyingInfo,
+       price,
+       carName: name
+     }
 
-    //
+    //server
+    fetch('http://localhost:5000/cars',{
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(car)
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.insertedId){
+        alert('Successfully Booked your buying Car.We Will notified you in your email.')
+        handleBuyingClose();
+      }
+    })
 
-    handleBuyingClose();
+
+   
     e.preventDefault();
    }
     return (
@@ -63,21 +95,26 @@ const BuyingModal = ({openBuying, handleBuyingClose, product}) => {
         />
           <TextField
           sx={{width: '90%', m: 1}}
-          
+    
           id="outlined-size-small"
-          defaultValue="Enter Your Name"
+          name="userName"
+          onBlur={handleOnBlur}
+          defaultValue="your name"
           size="small"
         />
           <TextField
           sx={{width: '90%', m: 1}}
-          
+          required
+          name="email"
+          onBlur={handleOnBlur}
           id="outlined-size-small"
-          defaultValue="Enter Your Email"
+          defaultValue={user.email}
           size="small"
         />
           <TextField
           sx={{width: '90%', m: 1}}
-          
+          name="phone"
+          onBlur={handleOnBlur}
           id="outlined-size-small"
           defaultValue="Enter Your phone"
           size="small"
