@@ -11,8 +11,9 @@ const Product = ({product}) => {
     const handleBuyingClose = () => setBuyingOpen(false);
     return (
       <>
+      
      <div>
-
+      
       <div class="col h-100">
       <div class="card h-100">
         <img src={img} class="card-img-top" alt="..."/>

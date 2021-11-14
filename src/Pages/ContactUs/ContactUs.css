@@ -1,0 +1,9 @@
+.contact-us{
+    background-image: url(../../images/ferrari-monza-sp1.webp);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-color: rgb(77, 75, 75);
+   
+    padding: 25px;
+    border:1px solid lightgrey;
+}

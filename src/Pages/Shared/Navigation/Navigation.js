@@ -24,8 +24,8 @@ const Navigation = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            CarHub
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
+            <NavLink style={{textDecoration: 'none', color:'white'}} to="/home">CarHub</NavLink>
           </Typography>
           <NavLink style={{textDecoration: 'none', color:'white'}} to="/explores"><Button color="inherit">Explores</Button></NavLink>
             {
