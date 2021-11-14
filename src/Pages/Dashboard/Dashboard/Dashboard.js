@@ -27,6 +27,11 @@ import DashboardHome from './DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AddCar from '../AddCar/AddCar';
 import useAuth from '../../../Hooks/useAuth';
+import Pay from '../Pay/Pay';
+import Review from '../Review/Review';
+import MyOrders from '../MyOrders/MyOrders';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+
 
 
 const drawerWidth = 240;
@@ -35,7 +40,7 @@ function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
- const {admin} =useAuth();
+ const {admin, logOut} =useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -52,9 +57,14 @@ function Dashboard(props) {
       {admin && <Box>
         <NavLink style={{color:'black'}} to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></NavLink><br />
       <NavLink style={{color:'black'}} to={`${url}/addCar`}><Button color="inherit">Add A Car</Button></NavLink>
-        </Box>}
+      </Box>}
+      <NavLink style={{color:'black'}} to={ `${url}/pay` }><Button color="inherit">Pay</Button></NavLink><br />
+      <NavLink style={{color:'black'}} to={`${url}/review`}><Button color="inherit">Review</Button></NavLink><br />
+      <NavLink style={{color:'black'}} to={`${url}/myOrders`}><Button color="inherit">my orders</Button></NavLink><br />
+      <Button onClick={logOut} color="inherit">LogOut</Button>
+
       <List>
-        {['Pay', 'My Orders', 'Review', 'LogOut'].map((text, index) => (
+        {[].map((text, index) => (
           <ListItem button key={text}>
             {/* <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -145,17 +155,27 @@ function Dashboard(props) {
         <Route exact path={path}>
          <DashboardHome></DashboardHome>
         </Route>
-        <Route path={`${path}/makeAdmin`}>
+        <AdminRoute path={`${path}/makeAdmin`}>
          <MakeAdmin></MakeAdmin>
-        </Route>
+        </AdminRoute>
         <Route path={`${path}/addCar`}>
          <AddCar></AddCar>
+        </Route>
+        <Route path={`${path}/pay`}>
+         <Pay></Pay>
+        </Route>
+        <Route path={`${path}/review`}>
+         <Review></Review>
+        </Route>
+        <Route path={`${path}/myOrders`}>
+         <MyOrders></MyOrders>
         </Route>
       </Switch>
       </Box>
     </Box>
   );
 }
+
 
 Dashboard.propTypes = {
   /**
